@@ -44,3 +44,50 @@ def test(a,b):
     return a+b
 yv = test(4,8)
 print(yv)
+
+print('\n')
+
+# GLOBAL
+name = 'This is a global string'
+def greet():
+    #ENCLOSING
+    name = 'Sammy'
+
+    def hello():
+        # LOCAL
+        name = 'I am a local'
+        print('Hello ' +name)
+
+    hello()
+print(greet())
+print('\n')
+
+x = 50
+def func(x):
+    print(f'X is {x}')
+
+    # local reassignment
+    x = 35
+    print('Changed local x to', x)
+print(func(20))
+print('\n')
+
+x = 50
+def func():
+    global x
+    print(f'X is {x}')
+
+
+    # local reassignment on a global variable
+    x = 'NEW VALUE'
+    print(f'I locally Changed GLOBAL x to {x}')
+print(x)
+print(func())
+print(x)
+
+def vol(rad):
+    import math
+    return (4/3)*math.pi*rad**3
+
+v = vol(2)
+print(v)
