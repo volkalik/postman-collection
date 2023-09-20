@@ -42,5 +42,5 @@ print('\n')
 
 def test(a,b):
     return a+b
-y = test(3,5)
-print(y)
+yv = test(4,8)
+print(yv)
