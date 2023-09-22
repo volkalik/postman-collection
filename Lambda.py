@@ -1,101 +1,130 @@
-"Lambda expressions, Map, Filter functions" 
+"Lambda expressions, Map, Filter functions"
+
+
 # Task1 
 def square(num):
-    return num**2
-my_nums = [1,2,3,4,5]
+    return num ** 2
 
-for item in map(square,my_nums):
+
+my_nums = [1, 2, 3, 4, 5]
+
+for item in map(square, my_nums):
     print(item)
 
-l = list(map(square,my_nums))
+l = list(map(square, my_nums))
 print(l)
 print('\n')
 
+
 def splicer(mystring):
-    if len(mystring)%2 == 0:
+    if len(mystring) % 2 == 0:
         return 'EVEN'
     else:
         return mystring[0]
 
+
 names = ['ANdy', 'Eve', 'Sally']
-lsp = list(map(splicer,names))
+lsp = list(map(splicer, names))
 print(lsp)
 print('\n')
-def check_even(num):
-    return num%2 == 0
-mynums = [1,2,3,4,5,6]
 
-evl = list(filter(check_even,mynums))
+
+def check_even(num):
+    return num % 2 == 0
+
+
+mynums = [1, 2, 3, 4, 5, 6]
+
+evl = list(filter(check_even, mynums))
 print(evl)
 
-for n in filter(check_even,mynums):
+for n in filter(check_even, mynums):
     print(n)
 print('\n')
 
+
 def square(num):
     return num ** 2
+
+
 print(square(3))
 
 square = lambda num: num ** 2
 print(square(4))
 print('\n')
 
-def test(a,b):
-    return a+b
-yv = test(4,8)
+
+def test(a, b):
+    return a + b
+
+
+yv = test(4, 8)
 print(yv)
 
 print('\n')
 
 # GLOBAL
 name = 'This is a global string'
+
+
 def greet():
-    #ENCLOSING
+    # ENCLOSING
     name = 'Sammy'
 
     def hello():
         # LOCAL
         name = 'I am a local'
-        print('Hello ' +name)
+        print('Hello ' + name)
 
     hello()
+
+
 print(greet())
 print('\n')
 
 x = 50
+
+
 def func(x):
     print(f'X is {x}')
 
     # local reassignment
     x = 35
     print('Changed local x to', x)
+
+
 print(func(20))
 print('\n')
 
 x = 50
+
+
 def func():
     global x
     print(f'X is {x}')
 
-
     # local reassignment on a global variable
     x = 'NEW VALUE'
     print(f'I locally Changed GLOBAL x to {x}')
+
+
 print(x)
 print(func())
 print(x)
 
+
 def vol(rad):
     import math
-    return (4/3)*math.pi*rad**3
+    return (4 / 3) * math.pi * rad ** 3
+
 
 v = vol(2)
 print(v)
 print('\n')
 
-
 print("""Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
 Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?'\n""")
+
 
 def up_low(s):
     d = {'upper': 0, 'lower': 0}
@@ -112,23 +141,52 @@ def up_low(s):
     dl = d['lower']
     print(f'No. of Upper case characters: {du}')
     print(f'No. of Lower case Characters: {dl}')
+
+
 s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
 print(up_low(s))
 
-#print('\n')
+# print('\n')
 print('\n   Write a Python function that takes a list and returns a new list with unique elements of the first list.')
+
+
 def unique_list(lst):
     lst2 = []
     for n in lst:
         if n not in lst2:
             lst2.append(n)
-    print(lst2)
-#    for n in lst2:
-#        print(n)
-
-unique_list([1,1,1,1,2,2,3,3,3,3,4,5])
+    print(lst2, '\n')
 
 
-#for n in lst:
- #   if lst[n] == lst[n + 1]:
-  #      lst2.append(n)
+unique_list([1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5])
+
+print('Write a Python function to multiply all the numbers in a list.\n')
+
+
+def multiply(numbers):
+    result = 1
+    for n in numbers:
+        result *= n
+    print('result is ', result, '\n')
+
+
+multiply([1, 2, 3, -4])
+
+print('Write a Python function that checks whether a word or phrase is palindrome or not.\n')
+s = 'Write a Python'
+s1 = s[::-1]
+print(s1, '\n')
+
+
+def palindrome(s):
+    s = s.replace(" ", "")
+    s2 = s[::-1]
+    print(s2)
+    if s2 == s in s:
+        return True
+    else:
+        return False
+
+
+
+print(palindrome('nurses run '))
