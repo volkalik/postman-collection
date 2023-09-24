@@ -129,3 +129,78 @@ print('\n')
 def ran_check(num,low,high):
     return num in range(low,high+1)
 print(ran_check(4,33,81))
+
+print("""Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?'\n""")
+
+
+def up_low(s):
+    d = {'upper': 0, 'lower': 0}
+
+    for char in s:
+        if char.isupper():
+            d['upper'] += 1
+        elif char.islower():
+            d['lower'] += 1
+        else:
+            pass
+
+    du = d['upper']
+    dl = d['lower']
+    print(f'No. of Upper case characters: {du}')
+    print(f'No. of Lower case Characters: {dl}')
+
+
+s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
+print(up_low(s))
+
+# print('\n')
+print('\n   Write a Python function that takes a list and returns a new list with unique elements of the first list.')
+
+
+def unique_list(lst):
+    lst2 = []
+    for n in lst:
+        if n not in lst2:
+            lst2.append(n)
+    print(lst2, '\n')
+
+
+unique_list([1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5])
+
+print('Write a Python function to multiply all the numbers in a list.\n')
+
+
+def multiply(numbers):
+    result = 1
+    for n in numbers:
+        result *= n
+    print('result is ', result, '\n')
+
+
+multiply([1, 2, 3, -4])
+
+print('Write a Python function that checks whether a word or phrase is palindrome or not.\n')
+s = 'Write a Python'
+s1 = s[::-1]
+print(s1, '\n')
+
+
+def palindrome(s):
+    s = s.replace(" ", "")
+    s2 = s[::-1]
+    print(s2)
+    if s2 == s in s:
+        return True
+    else:
+        return False
+
+
+
+print(palindrome('nurses run '),'\n')
+
+with open('Milestione_project1.py', mode='w') as for_loops:
+    for_loops.write("st = 'Print only the words that start with s in this sentence'")
+    for_loops.close()
+
+print(for_loops)
