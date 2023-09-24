@@ -87,7 +87,45 @@ print(x)
 
 def vol(rad):
     import math
-    return (4/3)*math.pi*rad**3
+    return (4/3)*(math.pi)*(rad**3)
 
-v = vol(2)
-print(v)
+print(vol(2))
+print('\n')
+
+def ran_check(num,low,high):
+    if low < num < high:
+        return f'{num} is in the range between {low} and {high}'
+    elif low > num:
+        return f'{num} is less than {low}'
+    elif num > high:
+        return f'{num} is more than {high}'
+    else:
+        pass
+r = ran_check(6,2,7)
+print(r)
+print('\n')
+def ran_check(num,low,high):
+    if low < num < high:
+        return True
+    else:
+        return False
+r = ran_check(5,3,10)
+print(r)
+print('\n')
+
+def ran_check(num,low,high):
+    if num in range(low,high+1):
+        return f'{num} is in the range between {low} and {high}'
+    elif low > num:
+        return f'{num} is less than {low}'
+    elif num > high:
+        return f'{num} is more than {high}'
+    else:
+        pass
+r = ran_check(47,47,138)
+print(r)
+print('\n')
+
+def ran_check(num,low,high):
+    return num in range(low,high+1)
+print(ran_check(4,33,81))
