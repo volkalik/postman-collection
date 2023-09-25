@@ -1,0 +1,36 @@
+import turtle
+a = 100
+b = a/2
+turtle.pensize(5)
+turtle.color('green')
+turtle.speed(1)
+turtle.right(60)
+turtle.forward(a)
+turtle.right(120)
+turtle.forward(a)
+turtle.right(120)
+turtle.forward(a)
+
+turtle.left(120)
+turtle.forward(b)
+turtle.right(120)
+turtle.forward(a)
+turtle.right(120)
+turtle.forward(a)
+turtle.right(120)
+turtle.forward(b)
+
+turtle.penup()
+turtle.left(-90)
+turtle.forward(pow((a**2 - b**2),0.5))
+turtle.right(30)
+turtle.pendown()
+
+turtle.left(120)
+turtle.forward(b)
+turtle.right(120)
+turtle.forward(a)
+turtle.right(120)
+turtle.forward(a)
+turtle.right(120)
+turtle.forward(b)
