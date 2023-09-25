@@ -41,5 +41,18 @@ def user_choice():
     return int(choice)
 
 
-print('user digit is: ', user_choice())
-user_choice()
+print('user digit is: ', user_choice(), '\n')
+
+print("Now let's explore how to 'clear' the output,"
+      "that way we don't see the history of the 'Choose a number' statements.".upper(), '\n')
+
+
+
+def user_choice():
+    choice = 'wrong'
+
+    while choice.isdigit() == False:
+        choice = input('Choose number: ')
+
+        if choice.isdigit() == False:
+
