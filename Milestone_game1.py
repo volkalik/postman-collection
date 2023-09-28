@@ -30,7 +30,7 @@ def replacement_choice(game_list, position):
     return game_list
 
 
-replacement_choice(game_list, 2)
+replacement_choice(game_list, 1)
 
 
 def gameon_choice():
@@ -48,3 +48,14 @@ def gameon_choice():
     return int(choice)
 
 print(gameon_choice())
+
+
+game_on = True
+game_list = [0,1,2]
+
+while game_on:
+    display_game(game_list)
+    position = position_choice()
+    game_list = replacement_choice(game_list, position)
+    display_game(game_list)
+    game_on = gameon_choice()
