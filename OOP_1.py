@@ -50,4 +50,4 @@ class Animal():
 myanimal = Animal()
 print(myanimal.eat(), '\n___________________________\n')
 
-cla
+
