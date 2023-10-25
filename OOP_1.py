@@ -12,7 +12,7 @@ class Dog():
         self.name = name
 
     def bark(self, number):
-        print("WOOF! My name is {} and number is {}".format(self.name, number))
+        return "WOOF! My name is {} and number is {}".format(self.name, number)
 
 my_dog = Dog(breed='lab', name='Deny')
 
@@ -21,7 +21,7 @@ my_dog = Dog(breed='lab', name='Deny')
 
 #print(my_dog.breed, my_dog.name)
 
-print(my_dog.bark(7), '\n')
+print(my_dog.bark(7))
 
 class Circle():
 
