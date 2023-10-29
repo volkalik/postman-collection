@@ -1,4 +1,4 @@
-import one
+from Basic_2 import one
 
 print('TOP LEVEL IN TWO.PY')
 

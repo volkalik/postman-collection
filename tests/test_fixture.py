@@ -1,5 +1,5 @@
 import pytest
-from OOP_1 import Dog, my_dog
+from Basic_2.OOP_1 import Dog
 
 
 @pytest.fixture

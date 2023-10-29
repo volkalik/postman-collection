@@ -68,7 +68,7 @@ print('\n \n')
 t = (1,2,3)
 my_list = [1,2,3]
 
-myfile = open('secondfile.txt')
+myfile = open('../Basic_2/secondfile.txt')
 
 contents = myfile.read()
 print(contents)
@@ -112,10 +112,10 @@ file.close()
 file = open('/Users/oleksandr.volk/Documents/My/thirdfile.txt', 'r')
 print(file.read())
 
-s5 = open('Remember.py', 'w')
+s5 = open('../Basic_2/Remember.py', 'w')
 s5.write("# Home tasks")
 s5.close()
-with open('Remember.py', mode= 'r') as s5:
+with open('../Basic_2/Remember.py', mode='r') as s5:
     print(s5.read())
 s5.close()
 

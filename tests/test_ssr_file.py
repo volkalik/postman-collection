@@ -1,5 +1,4 @@
-import pytest
-from ssr_file import SomeResourceClient
+from Basic.ssr_file import SomeResourceClient
 
 
 def test_ssr():
