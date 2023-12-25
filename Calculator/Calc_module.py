@@ -35,3 +35,5 @@ try:
     print("Division:", result_divide)
 except ValueError as e:
     print("Error:", e)
+
+ranks

@@ -191,7 +191,7 @@ def palindrome(s):
 
 print(palindrome('nurses run '),'\n')
 
-with open('../Basic_2/Milestione_project1.py', mode='w') as for_loops:
+with open('../basic_2/Milestione_project1.py', mode='w') as for_loops:
     for_loops.write("st = 'Print only the words that start with s in this sentence'")
     for_loops.close()
 
