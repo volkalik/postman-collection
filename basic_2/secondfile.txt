@@ -1,5 +1,0 @@
-firstest string,
-second string,
-third one
-fourth line
-fifth line
